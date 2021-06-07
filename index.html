@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script
+      src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){handleClientLoad()};"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()"
+    ></script>
+    <script src="./bundle.js"></script>
+  </head>
+  <body>
+    <div class="todoapp-header-status">
+      <button id="sign-in-or-out-button">Sign In/Authorize</button>
+      <button id="revoke-access-button" style="display: none">
+        Revoke access
+      </button>
+
+      <div
+        id="auth-status"
+        style="display: inline; padding-right: 25px; order: -1"
+      ></div>
+    </div>
+
+    <section class="todoapp">
+      <header class="header">
+        <h1>todos</h1>
+        <input
+          class="new-todo"
+          id="my-todo"
+          placeholder="What needs to be done?"
+          autofocus
+        />
+      </header>
+      <section class="main">
+        <ul class="todo-list"></ul>
+      </section>
+      <footer>
+        <ul class="filter">
+          <!-- <li class="item-left"></li> -->
+          <li><a href="#/">All</a></li>
+          <li><a href="#/active">Active</a></li>
+          <li><a href="#/completed">Completed</a></li>
+          <li class="clear-Completed"><a href="#">Clear completed</a></li>
+          <li class="save-todos"><a href="#">Save Todos</a></li>
+        </ul>
+      </footer>
+    </section>
+    <footer class="info">
+      <p>Double-Click to edit a todo</p>
+      <p>Created by Ephraim Nyakpo Elvis</p>
+    </footer>
+
+    <script src="./bundle.js"></script>
+  </body>
+</html>
